@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Vegitables</h1>
+<table>
+    <thead>
+        <tr>
+            <th>No.</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Available</th>
+        </tr>
+    </thead>
+   <tbody>
+        {% for i in b1 %}
+        <tr>
+            <td>{{forloop.counter}}</td>
+             <td>{{i.name}}</td>
+             <td>{{i.Price}}</td>
+             <td>{{i.Quantity}}</td>
+             <td>{% if i.Quantity > 0 %}
+            Available
+            {% else %}
+            Not available
+            {% endif %}
+            </td>
+
+        </tr>
+        {% endfor %}
+    </tbody>
+
+
+</body>
+</html>
